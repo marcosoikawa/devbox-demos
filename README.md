@@ -33,14 +33,20 @@ devbox-demos/
 #### Step 1: Choose Your Configuration
 Start with the provided `imageDefinition.yaml` or create your own based on the templates in this repository.
 
-#### Step 2: Validate Your Configuration
-If you're working in an Azure Dev Box environment, validate your configuration:
+#### Step 2: Create and Validate with GitHub Copilot
+Use GitHub Copilot to assist with creating and validating your Dev Box configurations:
+
+- **Create configurations**: Ask GitHub Copilot to help generate imageDefinition.yaml files for specific development scenarios
+- **Validate syntax**: Use Copilot to review and validate your YAML configuration files
+- **Best practices**: Get recommendations for optimizing your Dev Box customizations
+
+If you're working in an Azure Dev Box environment, you can also validate using the CLI:
 
 ```powershell
 devbox customizations validate-tasks --filePath "path/to/your/imageDefinition.yaml"
 ```
 
-> **Note**: The `devbox` CLI is only available within Azure Dev Box environments.
+> **Note**: The `devbox` CLI is only available within Azure Dev Box environments. For comprehensive guidance on using GitHub Copilot with Dev Box configurations, see the [official documentation](https://learn.microsoft.com/en-us/azure/dev-box/how-to-configure-team-customizations?tabs=copilot-agent).
 
 #### Step 3: Deploy Your Image Definition
 
@@ -100,18 +106,21 @@ You can extend the image definition with additional tasks:
 
 ## 🛠️ Development Workflow
 
-### 1. Local Development
-- Edit YAML files locally using VS Code or your preferred editor
+### 1. Local Development with GitHub Copilot
+- Use GitHub Copilot to generate and edit YAML configurations
+- Get AI-assisted recommendations for software packages and configurations
+- Validate syntax and best practices with Copilot's guidance
 - Use Git for version control and collaboration
-- Test syntax using YAML validators
 
 ### 2. Testing Process
-1. **Syntax Validation**: Ensure YAML syntax is correct
-2. **Package Verification**: Verify winget package IDs exist and are current
-3. **Staged Deployment**: Test with a small Dev Box pool first
-4. **Full Deployment**: Deploy to production pools after successful testing
+1. **AI-Assisted Creation**: Use GitHub Copilot to generate imageDefinition.yaml files
+2. **Syntax Validation**: Ensure YAML syntax is correct with Copilot's help
+3. **Package Verification**: Verify winget package IDs exist and are current
+4. **Staged Deployment**: Test with a small Dev Box pool first
+5. **Full Deployment**: Deploy to production pools after successful testing
 
 ### 3. Best Practices
+- **AI-Powered Development**: Leverage GitHub Copilot for configuration creation and optimization
 - **Version Control**: Keep all configurations in Git
 - **Documentation**: Document each customization task
 - **Modular Design**: Create separate YAML files for different scenarios
@@ -175,6 +184,7 @@ winget show Publisher.PackageName
 ### Getting Help
 
 - [Azure Dev Box Documentation](https://learn.microsoft.com/en-us/azure/dev-box/)
+- [Configure Team Customizations with GitHub Copilot](https://learn.microsoft.com/en-us/azure/dev-box/how-to-configure-team-customizations?tabs=copilot-agent)
 - [Winget Package Repository](https://winget.run/)
 - [Community Support Forums](https://techcommunity.microsoft.com/t5/azure-dev-box/bd-p/AzureDevBox)
 
